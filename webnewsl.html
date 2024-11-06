@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="icon" type="image" href="./images/icons8-news-48.png">
+    <link rel="stylesheet" href="design_news.css">
+</head>
+<body>
+    <nav>
+        <div class="main_nav container flex">
+            <a href="#" onclick="reload()">
+                <img src="./images/news_logo3.jpg" alt="news_logo">
+            </a>
+            <div class="nav_links">
+                <ul>
+                   <li class="hover_link nav_items" id="cricket" onclick="onNavItemClick('cricket')" >Cricket</li>
+                   <li class="hover_link nav_items" id="finance" onclick="onNavItemClick('finance')" >Finance</li>
+                   <li class="hover_link nav_items" id="politics" onclick="onNavItemClick('politics')" >Politics</li>
+                   <li class="hover_link nav_items" id="technology" onclick="onNavItemClick('technology')" >Technology</li>
+                </ul>
+            </div>
+            <div class="search_bar flex">
+                <input id="search_text" type="text" class="news_input" placeholder="eg.science">
+                <button id="search_button" class="search_button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        
+            <div class="cards_container container flex" id="cards-container"> 
+            </div>
+    </main>
+    <template id="template_news_card">
+        <div class="card">
+            <div class="card_header">
+                <img src="https://via.placeholder.com/400x200" alt="card-image" id="news_img">
+            </div>
+            <div class="card_content">
+                <h3 id="news_title">This is the title 5</h3>
+                <h6 id="news_source">End Gadget 20/10/2024</h6>
+                <p class="news_desc"  id="news_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est recusandae enim fugiat id eaque reiciendis dolore, inventore placeat earum beatae.</p>
+            </div>
+        </div>
+
+    </template>
+
+
+    <script src="scripting_news.js"></script>
+</body>
+</html>
